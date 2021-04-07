@@ -144,7 +144,7 @@ Solution:\\
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=\textwidth, scale=0.5]{images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png}
+    \includegraphics[width=\textwidth, scale=0.5]{images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(3).png}
     \caption{Calculation in computation graph}
     \label{fig:comp_cal}
 \end{figure}
@@ -168,7 +168,7 @@ Solution:\\
 %     \caption{Jacobian using forward mode auto-differentiation }
 %     \label{fig:jacob_for}
 % \end{figure}
-Jacobian w.r.t $x_1$ is show below:\\
+Diff. of $f(x_1, x_2)$ w.r.t $x_1$ is show below:\\
 
 \begin{fleqn}
     \begin{gather*}
@@ -186,11 +186,13 @@ Jacobian w.r.t $x_1$ is show below:\\
         \dfrac{\partial v_{12}}{\partial x_{1}} = \dfrac{\partial v_{8}}{\partial x_{1}} = 1  \\
         \dfrac{\partial v_{13}}{\partial x_{1}} = \dfrac{\partial (v_{10} + v_{11})}{\partial x_{1}} = 0 + 0.14 = 0.14  \\
         \dfrac{\partial v_{14}}{\partial x_{1}} = \dfrac{\partial v_{13}}{\partial x_{1}}  = 0.14 \\
+        \dfrac{\partial y_{1}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 1 \\
+        \dfrac{\partial y_{2}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{1}}  = 0.14 \\
     \end{gather*}
 \end{fleqn}
 
 \newpage
-Jacobian w.r.t $x_2$ is show below:\\
+Diff. of $f(x_1, x_2)$ w.r.t $x_2$ is show below:\\
 \begin{fleqn}
     \begin{gather*}
         \dfrac{\partial v_{1}}{\partial x_{2}} =  0 \\
@@ -207,11 +209,12 @@ Jacobian w.r.t $x_2$ is show below:\\
         \dfrac{\partial v_{12}}{\partial x_{2}} = \dfrac{\partial v_{8}}{\partial x_{2}} = 2.70  \\
         \dfrac{\partial v_{13}}{\partial x_{2}} = \dfrac{\partial (v_{10} + v_11)}{\partial x_{2}} = 4  \\
         \dfrac{\partial v_{14}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 4 \\
+        \dfrac{\partial y_{1}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 2.70 \\
+        \dfrac{\partial y_{2}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 4 \\
     \end{gather*}
 \end{fleqn}
 
-So, \\
-
+So,
     \(
     \left. \frac{\partial f(x_1,x_2,)}{\partial x_1} \right|_{%
    \stackon[1pt]{$\scriptscriptstyle x_1=2$}{$\scriptscriptstyle x_2=1$}}
@@ -229,7 +232,13 @@ So, \\
    2.70\\ 4
    \end{pmatrix}$
 
-\newpage
+
+  $$ Jacobian =   
+  \begin{pmatrix}
+    0.14 & 2.70\\
+    1 & 4 
+    
+    \end{pmatrix}$$
 
 \item At 
 $x=
@@ -237,10 +246,21 @@ $x=
 2\\1
 \end{pmatrix}$, compute Jacobian using backward mode auto-differentiation. Show all steps.\\
 
-Solution:\\
+Solution: Q1.V\\
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.90\textwidth, height =0.90\textheight, scale=0.5]{images/y1_x.png}
+    \caption{backward diff of y1 w.r.t x1 and x2}}
+    \label{fig:y1_x}
+\end{figure}
 
-
-
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.90\textwidth, height =0.90\textheight, scale=0.5]{images/y2_x.png}
+    \caption{backward diff of y2 w.r.t x1 and x_2}}
+    \label{fig:y2_x}
+\end{figure}
 
 % \end{enumerate}
 \end{enumerate}

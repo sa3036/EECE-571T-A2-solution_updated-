@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.7)  7 APR 2021 08:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.4.7)  7 APR 2021 16:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -651,70 +651,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-<images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png, id=39, 1961.3275pt x 933.4875pt>
-File: images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png Graphic file (type png)
-<use images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png>
-Package pdftex.def Info: images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png  used on input line 147.
-(pdftex.def)             Requested size: 980.66136pt x 466.74261pt.
-
+<images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(3).png, id=39, 1975.38pt x 928.46875pt>
+File: images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(3).png Graphic file (type png)
+<use images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(3).png>
+Package pdftex.def Info: images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(3).png  used on input line 147.
+(pdftex.def)             Requested size: 987.68759pt x 464.23325pt.
+[4 </home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(3).png>]
 Underfull \hbox (badness 10000) in paragraph at lines 157--172
 
  []
 
-Runaway argument?
- \dfrac {\partial v_{1}}{\partial x_{1}} = 1 \\ \dfrac {\partial v_{2\ETC.
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:191: Paragraph ended before \gather* was complete.
-<to be read again> 
-                   \par 
-l.191 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 195--197
 
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:191: Missing $ inserted.
-<inserted text> 
-                $
-l.191 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+ []
 
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:191: Missing } inserted.
-<inserted text> 
-                }
-l.191 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:191: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.191 
-      
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Underfull \hbox (badness 10000) in paragraph at lines 243--248
 
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:191: Display math should end with $$.
-<to be read again> 
-                   \@@par 
-l.191 
-      
-The `$' that I just saw supposedly matches a previous `$$'.
-So I shall assume that you typed `$$' both times.
+ []
 
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:191: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.191 
-      
+[6]
+<images/y1_x.png, id=58, 668.4975pt x 1158.3275pt>
+File: images/y1_x.png Graphic file (type png)
+<use images/y1_x.png>
+Package pdftex.def Info: images/y1_x.png  used on input line 252.
+(pdftex.def)             Requested size: 334.24792pt x 579.16234pt.
+
+/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:255: Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.255 \end{figure}
+                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -722,122 +690,96 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7]
+
+LaTeX Warning: Text page 8 contains only floats.
+
+[8 </home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/images/y1_x.png>]
+<images/y2_x.png, id=71, 577.15625pt x 1406.25375pt>
+File: images/y2_x.png Graphic file (type png)
+<use images/y2_x.png>
+Package pdftex.def Info: images/y2_x.png  used on input line 260.
+(pdftex.def)             Requested size: 288.57741pt x 703.12515pt.
+
+/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:261: Missing $ inserted.
+<inserted text> 
+                $
+l.261 ...ion{backward diff of y2 w.r.t x1 and x_2}
+                                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:261: Missing $ inserted.
+<inserted text> 
+                $
+l.261 ...ion{backward diff of y2 w.r.t x1 and x_2}
+                                                  }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:263: Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.263 \end{figure}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--277
 
  []
 
-[4 </home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png>]
-
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:214: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214     \(
-            
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:230: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.230    \)
-           
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 234--239
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
-
- []
-
-
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:244: LaTeX Error: \begin{gather*} on input line 174 ended by \end{enumerate}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.244 \end{enumerate}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 252--255
-
- []
-
-<images/str.png, id=57, 963.6pt x 542.025pt>
+[9 </home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/images/y2_x.png>]
+<images/str.png, id=81, 963.6pt x 542.025pt>
 File: images/str.png Graphic file (type png)
 <use images/str.png>
-Package pdftex.def Info: images/str.png  used on input line 271.
+Package pdftex.def Info: images/str.png  used on input line 293.
 (pdftex.def)             Requested size: 469.75502pt x 264.23819pt.
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
-[7 </home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/images/str.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 289.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 311.
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+) [11 </home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/images/str.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--306
+Underfull \hbox (badness 10000) in paragraph at lines 322--328
 
  []
 
-
-/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.tex:307: LaTeX Error: \begin{fleqn} on input line 173 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.307 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
+[12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
  (/home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
 
 
 Package rerunfilecheck Warning: File `main.out' has changed.
@@ -853,26 +795,21 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 307.
- )
-(\end occurred inside a group at level 2)
-
-### semi simple group (level 2) entered at line 173 (\begingroup)
-### semi simple group (level 1) entered at line 102 (\begingroup)
-### bottom level 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
+ ) 
 Here is how much of TeX's memory you used:
- 12397 strings out of 483183
- 172738 string characters out of 5966293
- 468315 words of memory out of 5000000
- 27083 multiletter control sequences out of 15000+600000
+ 12415 strings out of 483183
+ 172963 string characters out of 5966293
+ 470315 words of memory out of 5000000
+ 27093 multiletter control sequences out of 15000+600000
  574162 words of font info for 67 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,10n,74p,1084b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,74p,1084b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on /home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.pdf (8 pages, 579219 bytes).
+Output written on /home/sa3036/Downloads/course/571T/A2/EECE-571T-A2-solution/main.pdf (12 pages, 680081 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
