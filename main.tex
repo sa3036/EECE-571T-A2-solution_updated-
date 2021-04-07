@@ -1,7 +1,10 @@
+% !TeX root = ./main.tex
+
 \documentclass[12pt]{article}
 
 \include{preamble}
 
+\usepackage{nccmath}
 \usepackage{mathrsfs}
 \usepackage{amsmath}
 \usepackage{bm}
@@ -16,7 +19,7 @@
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage{zref-abspage}
-\usepackage{amsmath}
+% \usepackage{amsmath}
 \def\code#1{\texttt{#1}}
 \hypersetup{
     colorlinks=true,
@@ -105,7 +108,7 @@ The computation graph for the vectors is shown in figure \ref{fig:comp_graph}:
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 17 cm, scale=0.5]{images/Screenshot_2021-04-06 A2_571T drawio - diagrams net.png}
+    \includegraphics[width=\textwidth, scale=0.5]{images/Screenshot_2021-04-07 A2_571T drawio - diagrams net.png}
     \caption{Computational graph}
     \label{fig:comp_graph}
 \end{figure}
@@ -121,11 +124,11 @@ The backpropagation graph for the computational graph in figure \ref{fig:back_gr
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 17 cm, scale=0.5]{images/Screenshot_2021-04-06 A2_571T drawio - diagrams net(1).png}
+    \includegraphics[width=\textwidth, scale=0.5]{images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(1).png}
     \caption{Backpropagation graph}
     \label{fig:back_graph}
 \end{figure}
-
+>
 \newpage
 
 \item Compute the value of f(x) at 
@@ -139,7 +142,7 @@ Solution:\\
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 17 cm, scale=0.5]{images/Screenshot_2021-04-06 A2_571T drawio - diagrams net(2).png}
+    \includegraphics[width=\textwidth, scale=0.5]{images/Screenshot_2021-04-07 A2_571T drawio - diagrams net(2).png}
     \caption{Calculation in computation graph}
     \label{fig:comp_cal}
 \end{figure}
@@ -157,13 +160,13 @@ $x=
 compute Jacobian using forward mode auto-differentiation. Show all steps.\\
 
 \newpage
-Solution: Q1.iv\\
- \begin{figure}[htp!]
-    \centering
-    \includegraphics[ height = 20 cm,  scale=0.40]{jacobian_forward.png}
-    \caption{Jacobian using forward mode auto-differentiation }
-    \label{fig:jacob_for}
-\end{figure}
+% Solution: Q1.iv\\
+%  \begin{figure}[htp!]
+%     \centering
+%     \includegraphics[ height = 20 cm,  scale=0.40]{jacobian_forward.png}
+%     \caption{Jacobian using forward mode auto-differentiation }
+%     \label{fig:jacob_for}
+% \end{figure}
 
 
 
@@ -178,38 +181,33 @@ compute Jacobian using backward mode auto-differentiation. Show all steps.\\
 
     
 
-% \begin{flalign} 
-\begin{equation*}
-    
 
-% \end{equation}
-\begin{align*}
-% \begin{flushleft}
-% \begin{cases}
 
-% $$
+% \begin{fleqn}
+%     \begin{equation}\label{eq1}
+%     \end{equation}
+% \end{fleqn}
 
-\dfrac{\partial v_{1}}{\partial x_{2}} =  0 && \\
-\dfrac{\partial v_{2}}{\partial x_{2}} =  1 && \\
-\dfrac{\partial v_{3}}{\partial x_{2}} = 0 && \\
-\dfrac{\partial v_{4}}{\partial x_{2}} = \dfrac{\partial (v_{2}\cdot v_1)}{\partial x_{2}} = v_1\cdot\dfrac{\partial v_{2}}{\partial x_{2}} + v_2\cdot\dfrac{\partial v_{1}}{\partial x_{2}} = 0\cdot 1 + 1\cdot 0 = 0  && \\
-\dfrac{\partial v_{5}}{\partial x_{2}} = \dfrac{\partial v_{5}}{\partial v_{2}}\cdot \dfrac{\partial v_{2}}{\partial x_{2}} =  \dfrac{\sigma(v_2)}{1-\sigma(v_2)} \cdot 1 = \dfrac{0.73}{1-0.73} = 2.70  && \\ 
-\dfrac{\partial v_{6}}{\partial x_{2}} = \dfrac{\partial v_{6}}{\partial v_{2}} \cdot \dfrac{\partial v_{2}}{\partial x_{2}} = 2 v_2 \cdot 1 = 2 \cdot 1 \cdot 1 = 2 && \\
-\dfrac{\partial v_{7}}{\partial x_{2}} = \dfrac{\partial v_{3}\cdot v_2}{\partial x_{2}} = v_2 \cdot \dfrac{\partial v_{3}}{\partial x_{2}} + v_3 \cdot \dfrac{\partial v_{2}}{\partial x_{2}} = 1 \cdot 0 + 2 \cdot 1 = 2 && \\ 
-\dfrac{\partial v_{8}}{\partial x_{2}} = \dfrac{\partial (v_{4} + v_5)}{\partial x_{2}} = 0 + 2.70 = 2.70 && \\
-\dfrac{\partial v_{9}}{\partial x_{2}} = \dfrac{\partial v_{9}}{\partial v_{6}} \cdot \dfrac{\partial v_{6}}{\partial x_{2}} = 3 \cdot \cos{3v_6} \cdot 2 =  6 \cdot (-0.98) = -5.88 && \\
-\dfrac{\partial v_{10}}{\partial x_{2}} = \dfrac{\partial v_{10}}{\partial v_{7}} \cdot \dfrac{\partial v_{7}}{\partial x_{2}}  = \exp{v_7} \cdot 2 = 15.76 && \\
-\dfrac{\partial v_{11}}{\partial x_{2}} = \dfrac{\partial (v_{1}\cdot v_9)}{\partial x_{2}} = v_9\cdot\dfrac{\partial v_{1}}{\partial x_{2}} + v_1\cdot\dfrac{\partial v_{9}}{\partial x_{2}} = 0.14 \cdot 0 + 2\cdot (-5.88) = -11.76 && \\
-\dfrac{\partial v_{12}}{\partial x_{2}} = \dfrac{\partial v_{8}}{\partial x_{2}} = 2.70 && \\
-\dfrac{\partial v_{13}}{\partial x_{2}} = \dfrac{\partial (v_{10} + v_11)}{\partial x_{2}} = 15.76  \\
-\dfrac{\partial v_{14}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 15.76 \\
-% \end{flalign}
+\begin{fleqn}
+    \begin{gather*}
+        \dfrac{\partial v_{1}}{\partial x_{2}} =  0 \\
+        \dfrac{\partial v_{2}}{\partial x_{2}} =  1  \\
+        \dfrac{\partial v_{3}}{\partial x_{2}} = 0  \\
+        \dfrac{\partial v_{4}}{\partial x_{2}} = \dfrac{\partial (v_{2}\cdot v_1)}{\partial x_{2}} = v_1\cdot\dfrac{\partial v_{2}}{\partial x_{2}} + v_2\cdot\dfrac{\partial v_{1}}{\partial x_{2}} = 0\cdot 1 + 1\cdot 0 = 0   \\
+        \dfrac{\partial v_{5}}{\partial x_{2}} = \dfrac{\partial v_{5}}{\partial v_{2}}\cdot \dfrac{\partial v_{2}}{\partial x_{2}} =  \dfrac{\sigma(v_2)}{1-\sigma(v_2)} \cdot 1 = \dfrac{0.73}{1-0.73} = 2.70  \\ 
+        \dfrac{\partial v_{6}}{\partial x_{2}} = \dfrac{\partial v_{6}}{\partial v_{2}} \cdot \dfrac{\partial v_{2}}{\partial x_{2}} = 2 v_2 \cdot 1 = 2 \cdot 1 \cdot 1 = 2 \\
+        \dfrac{\partial v_{7}}{\partial x_{2}} = \dfrac{\partial v_{3}\cdot v_2}{\partial x_{2}} = v_2 \cdot \dfrac{\partial v_{3}}{\partial x_{2}} + v_3 \cdot \dfrac{\partial v_{2}}{\partial x_{2}} = 1 \cdot 0 + 2 \cdot 1 = 2 \\ 
+        \dfrac{\partial v_{8}}{\partial x_{2}} = \dfrac{\partial (v_{4} + v_5)}{\partial x_{2}} = 0 + 2.70 = 2.70  \\
+        \dfrac{\partial v_{9}}{\partial x_{2}} = \dfrac{\partial v_{9}}{\partial v_{6}} \cdot \dfrac{\partial v_{6}}{\partial x_{2}} = 3 \cdot \cos{3v_6} \cdot 2 =  6 \cdot (-0.98) = -5.88  \\
+        \dfrac{\partial v_{10}}{\partial x_{2}} = \dfrac{\partial v_{10}}{\partial v_{7}} \cdot \dfrac{\partial v_{7}}{\partial x_{2}}  = \exp{v_7} \cdot 2 = 15.76  \\
+        \dfrac{\partial v_{11}}{\partial x_{2}} = \dfrac{\partial (v_{1}\cdot v_9)}{\partial x_{2}} = v_9\cdot\dfrac{\partial v_{1}}{\partial x_{2}} + v_1\cdot\dfrac{\partial v_{9}}{\partial x_{2}} = 0.14 \cdot 0 + 2\cdot (-5.88) = -11.76  \\
+        \dfrac{\partial v_{12}}{\partial x_{2}} = \dfrac{\partial v_{8}}{\partial x_{2}} = 2.70  \\
+        \dfrac{\partial v_{13}}{\partial x_{2}} = \dfrac{\partial (v_{10} + v_11)}{\partial x_{2}} = 15.76  \\
+        \dfrac{\partial v_{14}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 15.76 \\
+    \end{gather*}
+\end{fleqn}
 
-% $$
-% \end{cases}
-% \end{flushleft}
-\end{align*}
-\end{equation*}
+
 \end{enumerate}
 
 Note: The goal here is not the final result, it could be obtained easily by any symbolic differentiation
