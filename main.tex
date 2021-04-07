@@ -1,0 +1,277 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{lmodern} 
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{zref-abspage}
+\usepackage{amsmath}
+\def\code#1{\texttt{#1}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+\input{math_commands.tex}
+
+\newtoggle{spacingmode}
+%\toggletrue{spacingmode}  %STUDENTS: DELETE or COMMENT this line
+
+\newtoggle{professormode}
+%\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+\newcommand{\spc}[1]{\iftoggle{spacingmode}{\\ \vspace{#1cm}}}
+
+
+
+\title{EECE-571T Assignment 2}
+
+\author{Satish Kumar Sarraf (79792560)} %STUDENTS: write your name here
+
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+%\maketitle
+
+\centerline{ \underline{\Large{\textbf{EECE-571T Assignment 2}}}}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Release date:} Friday Feb. $26^{th}$, 2021 \quad \,\,\,\, \textbf{Deadline:} Thursday  Mar. $25^{th}$, 2021, 11:59 PM
+\vspace{0.8cm}
+
+\noindent Submissions will be made through Canvas as PDF attachments of your answers to Problems 1-3 and the completed version of notebooks both link to the notebook or the soft copy is acceptable.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Note:} it is important to view the digital version of this PDF as it contains important hyperlinks.
+
+\vspace{0.2cm}
+
+\noindent We encourage you to type up your answers in \LaTeX. To use the \LaTeX  file for this assignment as a template, you can go to 
+\href{https://www.overleaf.com/read/vqsksjrgcvtp}{this Overleaf project.}
+\vspace{0.3cm}
+
+
+\section{Automatic Differentiation - 25 points}
+
+The key to learning in deep neural networks is ability to compute the derivative of a vector function f with respect to the parameters of the deep neural network. Computing such derivatives as closed-form expressions for complex functions f is dificult and computationally expensive. Therefore, instead, deep learning packages define computational graphs and use automatic differentiation algorithms (typically backpropagation)
+to compute gradients progressively through the network using the chain rule.\\ \newline
+Let us define the following vector functions:
+
+ \begin{equation}
+ y_1 = f_1(x_1,x_2) = e^{2x_2} + x_1\sin{3x_2^2} 
+ \end{equation}
+ \begin{equation}
+ y_2 = f_2(x_1,x_2) = x_1x_2 + \sigma(x_2),
+ \end{equation}
+
+\noindent where $\sigma(.)$ denotes the standard sigmoid function. This is equivalent to a network with two inputs 
+$x = 
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
+$
+and two outputs 
+$y = 
+\begin{bmatrix}
+y_1\\
+y_2
+\end{bmatrix} = f(x)
+$
+and a set of intermediate layers.
+\begin{enumerate}[label=(\roman*)]
+
+\newpage
+\item Draw a computational graph. Computational graph should be at the level of elemental mathematical oprations (multiplication, square, sine, etc.) and constants/variables.\\
+
+
+Solution:\\
+The computation graph for the vectors is shown in figure \ref{fig:comp_graph}:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 17 cm, scale=0.5]{images/Screenshot_2021-04-06 A2_571T drawio - diagrams net.png}
+    \caption{Computational graph}
+    \label{fig:comp_graph}
+\end{figure}
+
+
+\newpage
+
+\item Draw backpropagation graph, based on computational graph above.\\
+
+% Solution: 
+Solution:\\
+The backpropagation graph for the computational graph in figure \ref{fig:back_graph}:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 17 cm, scale=0.5]{images/Screenshot_2021-04-06 A2_571T drawio - diagrams net(1).png}
+    \caption{Backpropagation graph}
+    \label{fig:back_graph}
+\end{figure}
+
+\newpage
+
+\item Compute the value of f(x) at 
+$x=
+\begin{pmatrix}
+2\\1
+\end{pmatrix}$
+using forward propagation. Please do not just plug in numbers directly into Eq. (1) and (2), this is not the intent here.
+
+Solution:\\
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width = 17 cm, scale=0.5]{images/Screenshot_2021-04-06 A2_571T drawio - diagrams net(2).png}
+    \caption{Calculation in computation graph}
+    \label{fig:comp_cal}
+\end{figure}
+
+The value of $f(x) = $ 
+$\begin{pmatrix} 7.66 \\ 2.73 \end{pmatrix}$
+
+
+
+\item At 
+$x=
+\begin{pmatrix}
+2\\1
+\end{pmatrix}$,
+compute Jacobian using forward mode auto-differentiation. Show all steps.\\
+
+\newpage
+Solution: Q1.iv\\
+ \begin{figure}[htp!]
+    \centering
+    \includegraphics[ height = 20 cm,  scale=0.40]{jacobian_forward.png}
+    \caption{Jacobian using forward mode auto-differentiation }
+    \label{fig:jacob_for}
+\end{figure}
+
+
+
+
+\newpage
+\item At 
+$x=
+\begin{pmatrix}
+2\\1
+\end{pmatrix}$,
+compute Jacobian using backward mode auto-differentiation. Show all steps.\\
+
+    
+
+% \begin{flalign} 
+\begin{equation*}
+    
+
+% \end{equation}
+\begin{align*}
+% \begin{flushleft}
+% \begin{cases}
+
+% $$
+
+\dfrac{\partial v_{1}}{\partial x_{2}} =  0 && \\
+\dfrac{\partial v_{2}}{\partial x_{2}} =  1 && \\
+\dfrac{\partial v_{3}}{\partial x_{2}} = 0 && \\
+\dfrac{\partial v_{4}}{\partial x_{2}} = \dfrac{\partial (v_{2}\cdot v_1)}{\partial x_{2}} = v_1\cdot\dfrac{\partial v_{2}}{\partial x_{2}} + v_2\cdot\dfrac{\partial v_{1}}{\partial x_{2}} = 0\cdot 1 + 1\cdot 0 = 0  && \\
+\dfrac{\partial v_{5}}{\partial x_{2}} = \dfrac{\partial v_{5}}{\partial v_{2}}\cdot \dfrac{\partial v_{2}}{\partial x_{2}} =  \dfrac{\sigma(v_2)}{1-\sigma(v_2)} \cdot 1 = \dfrac{0.73}{1-0.73} = 2.70  && \\ 
+\dfrac{\partial v_{6}}{\partial x_{2}} = \dfrac{\partial v_{6}}{\partial v_{2}} \cdot \dfrac{\partial v_{2}}{\partial x_{2}} = 2 v_2 \cdot 1 = 2 \cdot 1 \cdot 1 = 2 && \\
+\dfrac{\partial v_{7}}{\partial x_{2}} = \dfrac{\partial v_{3}\cdot v_2}{\partial x_{2}} = v_2 \cdot \dfrac{\partial v_{3}}{\partial x_{2}} + v_3 \cdot \dfrac{\partial v_{2}}{\partial x_{2}} = 1 \cdot 0 + 2 \cdot 1 = 2 && \\ 
+\dfrac{\partial v_{8}}{\partial x_{2}} = \dfrac{\partial (v_{4} + v_5)}{\partial x_{2}} = 0 + 2.70 = 2.70 && \\
+\dfrac{\partial v_{9}}{\partial x_{2}} = \dfrac{\partial v_{9}}{\partial v_{6}} \cdot \dfrac{\partial v_{6}}{\partial x_{2}} = 3 \cdot \cos{3v_6} \cdot 2 =  6 \cdot (-0.98) = -5.88 && \\
+\dfrac{\partial v_{10}}{\partial x_{2}} = \dfrac{\partial v_{10}}{\partial v_{7}} \cdot \dfrac{\partial v_{7}}{\partial x_{2}}  = \exp{v_7} \cdot 2 = 15.76 && \\
+\dfrac{\partial v_{11}}{\partial x_{2}} = \dfrac{\partial (v_{1}\cdot v_9)}{\partial x_{2}} = v_9\cdot\dfrac{\partial v_{1}}{\partial x_{2}} + v_1\cdot\dfrac{\partial v_{9}}{\partial x_{2}} = 0.14 \cdot 0 + 2\cdot (-5.88) = -11.76 && \\
+\dfrac{\partial v_{12}}{\partial x_{2}} = \dfrac{\partial v_{8}}{\partial x_{2}} = 2.70 && \\
+\dfrac{\partial v_{13}}{\partial x_{2}} = \dfrac{\partial (v_{10} + v_11)}{\partial x_{2}} = 15.76  \\
+\dfrac{\partial v_{14}}{\partial x_{2}} = \dfrac{\partial v_{13}}{\partial x_{2}}  = 15.76 \\
+% \end{flalign}
+
+% $$
+% \end{cases}
+% \end{flushleft}
+\end{align*}
+\end{equation*}
+\end{enumerate}
+
+Note: The goal here is not the final result, it could be obtained easily by any symbolic differentiation
+package (Mathematica, Matlab, etc.) and you will loose points if this is what you do. The goal is to show
+that you understand how backpropagation actually works and can do this by hand. This will be a bit painful,
+but in fact that is part of the point: ability of AutoDiff algorithms to do this automatically is a huge benefit.  \href{https://canvas.ubc.ca/files/13305822/download?download_frd=1}{Use the notation of this example}.
+
+\section{Convolutional Neural Network - 30 points}
+In this assignment we will be using the \href{https://www.tensorflow.org/datasets/catalog/mnist}{MNIST digit dataset}. The dataset contains images of hand-written digits ($0-9$), and the corresponding labels. The images have a resolution of $28\times 28$ pixels.
+Please go to \href{https://colab.research.google.com/drive/15QluTY841KoWqVh1CQ3lM6gKrtJvdRGC#scrollTo=_ut4_8RNi1oU}{the COLAB notebook here}, and create a new copy on your drive. In this notebook we will train a simple convolutional neural networks (CNNs) for classifying hand-written digit images from MNIST data set. Follow the steps and fill in the blanks with your code to build, train and test a CNN model on MNIST. \textbf{(10 point)}\\ \newline
+\noindent Give short answers to the following questions:
+
+\begin{enumerate}[label=(\roman*)]
+\item Using MINIST dataset as input (input size $28 \times 28$), what is the output size after applying convolution operation with filter size $3\times3$, padding 2, and stride 1? \textbf{(5 points)}
+\item Why do we have max-pooling in classification CNNs?\textbf{(5 points)}
+\item  Why do we use convolutions for images rather than
+just FC layers?\textbf{(5 points)}
+\item What is the difference between Sigmoid and Softmax activation functions?\textbf{(5 points)}
+\end{enumerate}
+
+\section{Recurrent Models - 45 points}
+ Here we use the same dataset as in question 2, but we will be using this data a bit differently this time around. Please go to \href{https://colab.research.google.com/drive/1uuA3lPuVd3TgdDF0EVYCqanaPd5y-_oF?usp=sharing}{the COLAB notebook here}, and create a new copy on your drive. Since this assignment will be focusing on recurrent networks that model sequential data, we will be looking at each image as a sequence: the networks you train will be "reading" the image one row at a time, from top to bottom (we could even do pixel-by-pixel, but in the interest of time we'll do row-by-row which is faster). Also, we will work with a binarized version of MNIST -- we constrain the values of the pixels to be either $0$ or $1$. You can do this by applying the method binarize, to the raw images.
+
+There are various ways and tasks for which we can use recurrent models. A depiction of the most common scenarios is available in the Figure below. In this assignment we will look at many-to-one (sequence to label/decision). You can use this to solve the classification task.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{images/str.png}
+    \caption{You will be implementing variants of many-to-one for classification}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{Understanding LSTM vs GRU - 15 points}
+Before going deeper into your practical tasks, take some time to revise and make sure you understand the two major types of recurrent cells you will be using in this assignment: Long-Short Term Memory Units (LSTM) first introduced by Hochreiter and Schmidhuber [1997] and the more recent Gated Recurrent Units (GRU) by Cho et al. [2014]. Once you have done this, answer the following questions:
+\begin{enumerate}[label=(\roman*)]
+\item Explain the vanishing gradient issue in RNNs and why it is important.\textbf{(5 points)}
+\item Explain the importance of gates in LSTM and GRU.\textbf{(5 points)}
+\item Explain the difference between LSTM and GRU.\textbf{(5 points)}
+\end{enumerate}
+
+\subsection{Implementation - 30 points}
+In this part you will train a number of many-to-one recurrent models that takes as input: an image (or part of an image) as a sequence (row by row) and after the last input row produces, as output, a probability distribution over the $10$ possible labels ($0-9$). The models will be trained using a cross-entropy loss function over these output probabilities. Use the Adam optimizer (with default settings other than the learning rate) for training. [Optional] Sometimes dropout has been shown to be beneficial in training recurrent models, so feel free to use it or any other form of regularization that seems to improve performance. It might be also worth trying out batch-normalization. \\ \newline
+
+Models: Your models will have the following structure:\\
+\begin{itemize}
+\item The input (current binarised row of pixels) can be fed directly into the recurrent connection without much further pre-processing. The only thing you need to do is have an affine transformation to match the dimensionality of the recurrent unit, i.e. one of $(32, 64)$.
+\item The output (probabilities over the 10 classes) is produced by looking at the last output of the recurrent units, transforming them via an affine transformation.
+\item For the recurrent part of the network, please implement and compare the following architectures:
+    \begin{enumerate}[label=(\roman*)]
+    \item LSTM with 32, 64 units. \textbf{(10 points)}
+    \item GRU with 32, 64 units. \textbf{(10 points)}
+    \item stacked LSTM: 3 recurrent layers with 32 units each. \textbf{(5 points)}
+    \item stacked GRU: 3 recurrent layers with 32 units each. \textbf{(5 points)}
+    \end{enumerate}
+\end{itemize}
+
+Your network should look like:\\
+$\textrm{Input} \Rightarrow \textrm{RNN cell} \Rightarrow \textrm{Relu} \Rightarrow \textrm{Fully connected} \Rightarrow \textrm{Relu} \Rightarrow \textrm{Fully connected} \Rightarrow \textrm{Output}$ \\ \newline
+For all cases train the model with these hyper-parameter settings
+epochs=10, learning rate=0.001, batch size=256, fully connected hidden units=64\\ \newline
+With these hyper-parameters you should be comfortably above $95\%$ test set accuracy on all tasks. (Feel free to try other settings, there are certainly better choices, but please report the results with these exact hyper-parameters). \\ \newline
+Please report the cross-entropy and the classification accuracy for the test set of the models trained. Your comparison should also include the computation time, and difficulty of implementation.
+
+\end{document}
+
